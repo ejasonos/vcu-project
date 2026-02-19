@@ -1,73 +1,38 @@
-# React + TypeScript + Vite
+# EV Vehicle Control Unit (VCU) - Fault Prediction and Data Visualization
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This application is designed to visualize and predict potential faults in the **Electric Vehicle (EV)** control unit (VCU) by reading real-time datasets. The data includes key metrics such as voltage, current, velocity, acceleration, temperature, and voltage per battery pack. By utilizing AI-driven predictions, the app helps in identifying potential issues before they escalate, ensuring the safety and performance of the EV.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Data Visualization**: View real-time datasets for voltage, current, velocity, acceleration, temperature, and battery pack voltage in dynamic charts and graphs.
+- **Fault Prediction**: AI-powered predictions for potential faults in the EV's VCU, based on data analysis.
+- **Real-Time Updates**: Continuously update data for monitoring vehicle performance and health.
+- **Fault Alerts**: Receive alerts on possible faults, such as abnormal temperature, voltage, or other key parameters.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**:  
+  - React.js for building the user interface.
+  - Zustand for state management to handle global app state and data.
+  - Tailwind CSS for responsive and modern UI design.
+  - React Router DOM for navigation between different pages and data visualizations.
 
-## Expanding the ESLint configuration
+- **Backend** (optional for dataset fetching and AI models):
+  - APIs for fetching real-time data (voltage, current, temperature, etc.).
+  - AI-powered fault prediction system (e.g., trained ML models) integrated with backend services.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Installation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+To run this project locally, follow these steps:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1. Clone this repository:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+   ```bash
+   git clone https://github.com/ejasonos/vcu-software.git
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Use pnpm not npm
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+   ```bash
+   cd vcu-software
+   pnpm install
+   pnpm run dev
