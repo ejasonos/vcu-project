@@ -1,13 +1,13 @@
 import useTelemetry from '../store/telemetry.js'
 
-const Home = () => {
+const Bms = () => {
     const name = useTelemetry((state)=>state.name)
     return (
         <>
-          Home Page
+          BMS Page
           <p>Lets say {name}</p>
         </>
     )
 }
 
-export default Home
+export default Bms

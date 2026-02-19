@@ -1,11 +1,11 @@
 import { Outlet } from 'react-router'
-import Navbar from './components/Navbar.jsx'
+import Sidebar from './components/Sidebar.jsx'
 
 const App = () => {
 
   return (
     <>
-      <Navbar />
+      <Sidebar />
       <Outlet />
     </>
   )

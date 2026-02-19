@@ -5,16 +5,18 @@ import './index.css'
 import App from './App.jsx'
 
 // import pages
-import About from './pages/About.jsx'
-import Home from './pages/Home.jsx'
+import Gevcu from './pages/Gevcu.jsx'
+import Bms from './pages/Bms.jsx'
+import AiDiagnostics from './pages/AiDiagnostics.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<App />}>
-          <Route path='home' element={<Home />} />
-          <Route path='about' element={<About />} />
+          <Route path='gevcu' element={<Gevcu />} />
+          <Route path='bms' element={<Bms />} />
+          <Route path='aidiagnostics' element={<AiDiagnostics />} />
         </Route>
       </Routes>
     </BrowserRouter>
