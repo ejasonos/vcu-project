@@ -28,7 +28,7 @@ To run this project locally, follow these steps:
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/ejasonos/vcu-software.git
+   git clone https://github.com/ejasonos/vcu-project.git
 
 2. Use pnpm not npm
 
