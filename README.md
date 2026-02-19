@@ -30,9 +30,9 @@ To run this project locally, follow these steps:
    ```bash
    git clone https://github.com/ejasonos/vcu-project.git
 
-2. Use pnpm not npm
+2. Use npm
 
    ```bash
-   cd vcu-software
-   pnpm install
-   pnpm run dev
+   cd vcu-project
+   npm install
+   npm run dev
